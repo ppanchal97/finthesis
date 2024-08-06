@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-finthesis-dev-c0ad5-authRole",
+      "UnauthRoleArn": "arn:aws:iam::637423381990:role/amplify-finthesis-dev-c0ad5-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::637423381990:role/amplify-finthesis-dev-c0ad5-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-finthesis-dev-c0ad5-deployment",
+      "UnauthRoleName": "amplify-finthesis-dev-c0ad5-unauthRole",
+      "StackName": "amplify-finthesis-dev-c0ad5",
+      "StackId": "arn:aws:cloudformation:us-east-1:637423381990:stack/amplify-finthesis-dev-c0ad5/a3b3cae0-53e5-11ef-92a4-0eb3646ef60b",
+      "AmplifyAppId": "d1hhk0arhmf6pa"
+    }
+  }
+}
