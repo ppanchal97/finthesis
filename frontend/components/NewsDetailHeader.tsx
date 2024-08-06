@@ -1,7 +1,13 @@
 import React from 'react';
 import ImpactBox from './ImpactBox';
 
-const NewsDetailHeader = ({ holdingImpact, portfolioImpact, onCreateNote }) => {
+interface NewsDetailHeaderProps {
+    holdingImpact: string;
+    portfolioImpact: string;
+    onCreateNote: () => void;
+}
+
+const NewsDetailHeader: React.FC<NewsDetailHeaderProps> = ({ holdingImpact, portfolioImpact, onCreateNote }) => {
     return (
         <div className="grid grid-cols-2 items-center text-lightblue" style={{ fontFamily: 'Roboto' }}>
             <div className="text-lightblue text-2xl font-bold" style={{ fontSize: '26px', lineHeight: '32px' }}>

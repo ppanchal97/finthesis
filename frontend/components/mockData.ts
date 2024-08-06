@@ -1,4 +1,6 @@
-export const watchlistNews = {
+import { NewsItem } from '@/types/types';
+
+export const watchlistNews: { [key: string]: NewsItem[] } = {
     "Test": [
         {
             id: 2341,
@@ -10,12 +12,7 @@ export const watchlistNews = {
             portfolio_impact: "moderate",
             holdings_impacted: ["VLGEA", "VWE"],
             source: "Bloomberg",
-            relevant_holding: {
-                'ticker': 'NASDAQ:VLGEA',
-                'position': '51324 (Long)',
-                'total_value': '$1,565,711.14',
-                'loss_gain': '$125,523.30'
-            }
+
         },
         {
             id: 26524,
@@ -27,12 +24,7 @@ export const watchlistNews = {
             portfolio_impact: "positive",
             holdings_impacted: ["UBER, LYFT, CART"],
             source: "Reuters",
-            relevant_holding: {
-                'ticker': 'NYSE: UBER',
-                'position': '2421 (Short)',
-                'total_value': '$836,123',
-                'loss_gain': '$15,239'
-            }
+
         },
         {
             id: 132353,
@@ -44,12 +36,7 @@ export const watchlistNews = {
             portfolio_impact: "critical",
             holdings_impacted: ["BA"],
             source: "AP",
-            relevant_holding: {
-                'ticker': 'NYSE: BA',
-                'position': '89712 (Short)',
-                'total_value': '$8,336,123',
-                'loss_gain': '(783,313)'
-            }
+
         },
         {
             id: 6245,
@@ -61,12 +48,7 @@ export const watchlistNews = {
             portfolio_impact: 'moderate',
             holdings_impacted: ["BA"],
             source: 'Bloomberg',
-            relevant_holding: {
-                'ticker': 'NYSE: BA',
-                'position': '89712 (Short)',
-                'total_value': '$8,336,123',
-                'loss_gain': '(783,313)'
-            }
+
         },
         {
             id: 435246,
@@ -78,12 +60,7 @@ export const watchlistNews = {
             portfolio_impact: 'critical',
             holdings_impacted: ["CVX", "XOM", "BP", "COP"],
             source: 'AP',
-            relevant_holding: {
-                'ticker': 'NYSE:CVX',
-                'position': '972103 (Long)',
-                'total_value': '$1,312,922',
-                'loss_gain': '(812,313)',
-            }
+
         },
         {
             id: 75324,
@@ -95,12 +72,7 @@ export const watchlistNews = {
             portfolio_impact: 'moderate',
             holdings_impacted: ["NEE", "GE", "SIEGY", "BEP"],
             source: 'CNN',
-            relevant_holding: {
-                'ticker': 'NYSE:NEE',
-                'position': '3186219 (Long)',
-                'total_value': '$24,021,308',
-                'loss_gain': '$5,193,120',
-            }
+ 
         }
     ],
     "iPhone": [
@@ -114,12 +86,7 @@ export const watchlistNews = {
             portfolio_impact: "moderate",
             holdings_impacted: ["003550", "BC94"],
             source: "Bloomberg",
-            relevant_holding: {
-                'ticker': 'KRX:003550',
-                'position': '91231 (Long)',
-                'total_value': '$7,824,129.12',
-                'loss_gain': '$1,300,193'
-            }
+
         },
     ],
     "Consumer": [
@@ -133,12 +100,7 @@ export const watchlistNews = {
             portfolio_impact: "positive",
             holdings_impacted: ["UBER, LYFT, CART"],
             source: "Reuters",
-            relevant_holding: {
-                'ticker': 'NYSE: UBER',
-                'position': '2421 (Short)',
-                'total_value': '$836,123',
-                'loss_gain': '$15,239'
-            }
+
         },
     ],
     "All": [
@@ -152,12 +114,7 @@ export const watchlistNews = {
             portfolio_impact: 'critical',
             holdings_impacted: ["CVX", "XOM", "BP", "COP"],
             source: 'AP',
-            relevant_holding: {
-                'ticker': 'NYSE:CVX',
-                'position': '972103 (Long)',
-                'total_value': '$1,312,922',
-                'loss_gain': '(812,313)',
-            }
+
         },
     ],
     "Highlights": [
@@ -171,12 +128,7 @@ export const watchlistNews = {
             portfolio_impact: 'moderate',
             holdings_impacted: ["BA"],
             source: 'Bloomberg',
-            relevant_holding: {
-                'ticker': 'NYSE: BA',
-                'position': '89712 (Short)',
-                'total_value': '$8,336,123',
-                'loss_gain': '(783,313)'
-            }
+
         },
     ],
     "Priority": [
@@ -190,12 +142,7 @@ export const watchlistNews = {
             portfolio_impact: "moderate",
             holdings_impacted: ["VLGEA", "VWE"],
             source: "Bloomberg",
-            relevant_holding: {
-                'ticker': 'NASDAQ:VLGEA',
-                'position': '51324 (Long)',
-                'total_value': '$1,565,711.14',
-                'loss_gain': '$125,523.30'
-            }
+
         },
         {
             id: 3422,
@@ -207,12 +154,7 @@ export const watchlistNews = {
             portfolio_impact: "positive",
             holdings_impacted: ["UBER, LYFT, CART"],
             source: "Reuters",
-            relevant_holding: {
-                'ticker': 'NYSE: UBER',
-                'position': '2421 (Short)',
-                'total_value': '$836,123',
-                'loss_gain': '$15,239'
-            }
+
         },
         {
             id: 3241,
@@ -224,12 +166,7 @@ export const watchlistNews = {
             portfolio_impact: "critical",
             holdings_impacted: ["BA"],
             source: "AP",
-            relevant_holding: {
-                'ticker': 'NYSE: BA',
-                'position': '89712 (Short)',
-                'total_value': '$8,336,123',
-                'loss_gain': '(783,313)'
-            }
+
         },
         {
             id: 1455,
@@ -241,12 +178,7 @@ export const watchlistNews = {
             portfolio_impact: 'moderate',
             holdings_impacted: ["BA"],
             source: 'Bloomberg',
-            relevant_holding: {
-                'ticker': 'NYSE: BA',
-                'position': '89712 (Short)',
-                'total_value': '$8,336,123',
-                'loss_gain': '(783,313)'
-            }
+
         },
         {
             id: 63524,
@@ -258,12 +190,7 @@ export const watchlistNews = {
             portfolio_impact: 'critical',
             holdings_impacted: ["CVX", "XOM", "BP", "COP"],
             source: 'AP',
-            relevant_holding: {
-                'ticker': 'NYSE:CVX',
-                'position': '972103 (Long)',
-                'total_value': '$1,312,922',
-                'loss_gain': '(812,313)',
-            }
+
         },
         {
             id: 735245,
@@ -275,12 +202,7 @@ export const watchlistNews = {
             portfolio_impact: 'moderate',
             holdings_impacted: ["NEE", "GE", "SIEGY", "BEP"],
             source: 'CNN',
-            relevant_holding: {
-                'ticker': 'NYSE:NEE',
-                'position': '3186219 (Long)',
-                'total_value': '$24,021,308',
-                'loss_gain': '$5,193,120',
-            }
+ 
         },
         {
             id: 2538,
@@ -292,12 +214,7 @@ export const watchlistNews = {
             portfolio_impact: 'moderate',
             holdings_impacted: ["MSFT", "NVDA", "GOOG", "TSLA"],
             source: 'FTC',
-            relevant_holding: {
-                'ticker': 'NVDA',
-                'position': '8913933 (Short)',
-                'total_value': '$13,433,128',
-                'loss_gain': '2,139,349',
-            }
+
         },
         {
             id: 92413,
@@ -309,12 +226,7 @@ export const watchlistNews = {
             portfolio_impact: 'positive',
             holdings_impacted: ["LMT", "BA", "RTX", "NOC"],
             source: 'AP',
-            relevant_holding: {
-                'ticker': 'RTX',
-                'position': '783983 (Long)',
-                'total_value': '$2,332,081',
-                'loss_gain': '$258,192',
-            }
+
         },
         {
             id: 124130,
@@ -326,12 +238,7 @@ export const watchlistNews = {
             portfolio_impact: 'moderate',
             holdings_impacted: ["ASML"],
             source: 'Bloomberg',
-            relevant_holding: {
-                'ticker': 'ASML',
-                'position': '981231 (Short)',
-                'total_value': '$2,012,342',
-                'loss_gain': '(456,213)',
-            }
+
         },
         {
             id: 1324131,
@@ -343,12 +250,7 @@ export const watchlistNews = {
             portfolio_impact: "moderate",
             holdings_impacted: ["VLGEA", "VWE"],
             source: "Bloomberg",
-            relevant_holding: {
-                'ticker': 'NASDAQ:VLGEA',
-                'position': '51324 (Long)',
-                'total_value': '$1,565,711.14',
-                'loss_gain': '$125,523.30'
-            }
+
         },
         {
             id: 1235244635,
@@ -360,12 +262,7 @@ export const watchlistNews = {
             portfolio_impact: "positive",
             holdings_impacted: ["UBER, LYFT, CART"],
             source: "Reuters",
-            relevant_holding: {
-                'ticker': 'NYSE: UBER',
-                'position': '2421 (Short)',
-                'total_value': '$836,123',
-                'loss_gain': '$15,239'
-            }
+
         },
         {
             id: 124533,
@@ -377,12 +274,7 @@ export const watchlistNews = {
             portfolio_impact: "critical",
             holdings_impacted: ["BA"],
             source: "AP",
-            relevant_holding: {
-                'ticker': 'NYSE: BA',
-                'position': '89712 (Short)',
-                'total_value': '$8,336,123',
-                'loss_gain': '(783,313)'
-            }
+
         },
         {
             id: 12534,
@@ -394,12 +286,7 @@ export const watchlistNews = {
             portfolio_impact: "moderate",
             holdings_impacted: ["003550", "BC94"],
             source: "Bloomberg",
-            relevant_holding: {
-                'ticker': 'KRX:003550',
-                'position': '91231 (Long)',
-                'total_value': '$7,824,129.12',
-                'loss_gain': '$1,300,193'
-            }
+
         },
         {
             id: 1253645,
@@ -411,12 +298,7 @@ export const watchlistNews = {
             portfolio_impact: 'moderate',
             holdings_impacted: ["BA"],
             source: 'Bloomberg',
-            relevant_holding: {
-                'ticker': 'NYSE: BA',
-                'position': '89712 (Short)',
-                'total_value': '$8,336,123',
-                'loss_gain': '(783,313)'
-            }
+
         },
         {
             id: 16675645,
@@ -428,12 +310,7 @@ export const watchlistNews = {
             portfolio_impact: 'critical',
             holdings_impacted: ["CVX", "XOM", "BP", "COP"],
             source: 'AP',
-            relevant_holding: {
-                'ticker': 'NYSE:CVX',
-                'position': '972103 (Long)',
-                'total_value': '$1,312,922',
-                'loss_gain': '(812,313)',
-            }
+
         },
         {
             id: 17564537,
@@ -445,12 +322,7 @@ export const watchlistNews = {
             portfolio_impact: 'moderate',
             holdings_impacted: ["NEE", "GE", "SIEGY", "BEP"],
             source: 'CNN',
-            relevant_holding: {
-                'ticker': 'NYSE:NEE',
-                'position': '3186219 (Long)',
-                'total_value': '$24,021,308',
-                'loss_gain': '$5,193,120',
-            }
+ 
         },
         {
             id: 16756458,
@@ -462,12 +334,7 @@ export const watchlistNews = {
             portfolio_impact: 'moderate',
             holdings_impacted: ["MSFT", "NVDA", "GOOG", "TSLA"],
             source: 'FTC',
-            relevant_holding: {
-                'ticker': 'NVDA',
-                'position': '8913933 (Short)',
-                'total_value': '$13,433,128',
-                'loss_gain': '2,139,349',
-            }
+
         },
         {
             id: 157643549,
@@ -479,12 +346,7 @@ export const watchlistNews = {
             portfolio_impact: 'positive',
             holdings_impacted: ["LMT", "BA", "RTX", "NOC"],
             source: 'AP',
-            relevant_holding: {
-                'ticker': 'RTX',
-                'position': '783983 (Long)',
-                'total_value': '$2,332,081',
-                'loss_gain': '$258,192',
-            }
+
         },
         {
             id: 2574540,
@@ -496,12 +358,7 @@ export const watchlistNews = {
             portfolio_impact: 'moderate',
             holdings_impacted: ["ASML"],
             source: 'Bloomberg',
-            relevant_holding: {
-                'ticker': 'ASML',
-                'position': '981231 (Short)',
-                'total_value': '$2,012,342',
-                'loss_gain': '(456,213)',
-            }
+
         },
         {
             id: 27564321,
@@ -513,12 +370,7 @@ export const watchlistNews = {
             portfolio_impact: 'moderate',
             holdings_impacted: ["BA"],
             source: 'Bloomberg',
-            relevant_holding: {
-                'ticker': 'NYSE: BA',
-                'position': '89712 (Short)',
-                'total_value': '$8,336,123',
-                'loss_gain': '(783,313)'
-            }
+
         },
         {
             id: 25463522,
@@ -530,12 +382,7 @@ export const watchlistNews = {
             portfolio_impact: 'critical',
             holdings_impacted: ["CVX", "XOM", "BP", "COP"],
             source: 'AP',
-            relevant_holding: {
-                'ticker': 'NYSE:CVX',
-                'position': '972103 (Long)',
-                'total_value': '$1,312,922',
-                'loss_gain': '(812,313)',
-            }
+
         },
         {
             id: 257463,
@@ -547,12 +394,7 @@ export const watchlistNews = {
             portfolio_impact: 'moderate',
             holdings_impacted: ["NEE", "GE", "SIEGY", "BEP"],
             source: 'CNN',
-            relevant_holding: {
-                'ticker': 'NYSE:NEE',
-                'position': '3186219 (Long)',
-                'total_value': '$24,021,308',
-                'loss_gain': '$5,193,120',
-            }
+ 
         },
         {
             id: 246354,
@@ -564,12 +406,7 @@ export const watchlistNews = {
             portfolio_impact: 'moderate',
             holdings_impacted: ["MSFT", "NVDA", "GOOG", "TSLA"],
             source: 'FTC',
-            relevant_holding: {
-                'ticker': 'NVDA',
-                'position': '8913933 (Short)',
-                'total_value': '$13,433,128',
-                'loss_gain': '2,139,349',
-            }
+
         },
         {
             id: 2746355,
@@ -581,12 +418,7 @@ export const watchlistNews = {
             portfolio_impact: 'positive',
             holdings_impacted: ["LMT", "BA", "RTX", "NOC"],
             source: 'AP',
-            relevant_holding: {
-                'ticker': 'RTX',
-                'position': '783983 (Long)',
-                'total_value': '$2,332,081',
-                'loss_gain': '$258,192',
-            }
+
         },
         {
             id: 25746536,
@@ -598,12 +430,7 @@ export const watchlistNews = {
             portfolio_impact: 'moderate',
             holdings_impacted: ["ASML"],
             source: 'Bloomberg',
-            relevant_holding: {
-                'ticker': 'ASML',
-                'position': '981231 (Short)',
-                'total_value': '$2,012,342',
-                'loss_gain': '(456,213)',
-            }
+
         },
         {
             id: 246357,
@@ -615,12 +442,7 @@ export const watchlistNews = {
             portfolio_impact: "moderate",
             holdings_impacted: ["VLGEA", "VWE"],
             source: "Bloomberg",
-            relevant_holding: {
-                'ticker': 'NASDAQ:VLGEA',
-                'position': '51324 (Long)',
-                'total_value': '$1,565,711.14',
-                'loss_gain': '$125,523.30'
-            }
+
         },
         {
             id: 284635,
@@ -632,12 +454,7 @@ export const watchlistNews = {
             portfolio_impact: "positive",
             holdings_impacted: ["UBER, LYFT, CART"],
             source: "Reuters",
-            relevant_holding: {
-                'ticker': 'NYSE: UBER',
-                'position': '2421 (Short)',
-                'total_value': '$836,123',
-                'loss_gain': '$15,239'
-            }
+
         },
         {
             id: 2463549,
@@ -649,12 +466,7 @@ export const watchlistNews = {
             portfolio_impact: "critical",
             holdings_impacted: ["BA"],
             source: "AP",
-            relevant_holding: {
-                'ticker': 'NYSE: BA',
-                'position': '89712 (Short)',
-                'total_value': '$8,336,123',
-                'loss_gain': '(783,313)'
-            }
+
         },
         {
             id: 346350,
@@ -666,12 +478,7 @@ export const watchlistNews = {
             portfolio_impact: "moderate",
             holdings_impacted: ["VLGEA", "VWE"],
             source: "Bloomberg",
-            relevant_holding: {
-                'ticker': 'NASDAQ:VLGEA',
-                'position': '51324 (Long)',
-                'total_value': '$1,565,711.14',
-                'loss_gain': '$125,523.30'
-            }
+
         },
     ]
 }

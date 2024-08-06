@@ -1,9 +1,15 @@
-// components/NewsCard.tsx
 import React from 'react';
 import ImpactBox from './ImpactBox';
+import { NewsItem } from '@/types/types';
 
-const NewsCard = ({ newsItem, onSelect, isActive, shouldFlash }) => {
-    // Combine all class names including conditional for flash animation
+interface NewsCardProps {
+    newsItem: NewsItem;
+    onSelect: () => void;
+    isActive: boolean;
+    shouldFlash: boolean;
+}
+
+const NewsCard: React.FC<NewsCardProps> = ({ newsItem, onSelect, isActive, shouldFlash }) => {
     const cardClasses = `rounded-lg p-4 mb-4 cursor-pointer shadow-lg 
                          ${isActive ? 'bg-active-bg text-white' : 'bg-inactive-bg text-gray-500'} 
                          ${shouldFlash ? 'flash-animation' : ''}`;
@@ -15,12 +21,16 @@ const NewsCard = ({ newsItem, onSelect, isActive, shouldFlash }) => {
             </div>
             <h2 className="text-lg font-bold mt-1">{newsItem.title}</h2>
             <p className="mt-1">{newsItem.description}</p>
-            <ImpactDetails newsItem={newsItem}/>
+            <ImpactDetails newsItem={newsItem} />
         </div>
     );
 };
 
-const ImpactDetails = ({ newsItem }) => {
+interface ImpactDetailsProps {
+    newsItem: NewsItem;
+}
+
+const ImpactDetails: React.FC<ImpactDetailsProps> = ({ newsItem }) => {
     return (
         <div className="mt-2">
             <div className="grid grid-cols-4 gap-2 text-xs font-medium uppercase text-gray-400 text-center">

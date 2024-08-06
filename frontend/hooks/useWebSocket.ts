@@ -1,10 +1,5 @@
 import { useEffect, useState, useCallback } from 'react';
-
-interface NewsItem {
-    title: string;
-    description: string;
-    full_text: string;
-}
+import { NewsItem } from '@/types/types';
 
 export const useWebSocket = (url: string) => {
     const [newsItems, setNewsItems] = useState<NewsItem[]>([]);

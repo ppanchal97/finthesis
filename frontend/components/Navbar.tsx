@@ -3,7 +3,11 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import CreateWatchlist from './CreateWatchList';
 
-const Navbar = ({ onWatchlistChange }) => {
+interface NavbarProps {
+    onWatchlistChange: (watchlist: any) => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onWatchlistChange }) => {
     const [showCreateWatchlist, setShowCreateWatchlist] = useState(false);
     const [watchlists, setWatchlists] = useState(['Priority', 'Highlights', 'All', 'Consumer', 'iPhone']);
 

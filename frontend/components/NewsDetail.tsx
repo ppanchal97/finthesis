@@ -1,11 +1,15 @@
-// components/NewsDetail.tsx
 import React, { useState } from 'react';
 import NewsText from './NewsText';
 import QAComponent from './QAComponent';
 import NewsDetailHeader from './NewsDetailHeader';
 import DraftInvestmentNote from './DraftInvestmentNote';
+import { NewsItem } from '@/types/types';
 
-const NewsDetail = ({ newsItem }) => {
+interface NewsDetailProps {
+    newsItem: NewsItem;
+}
+
+const NewsDetail: React.FC<NewsDetailProps> = ({ newsItem }) => {
     const [showNoteModal, setShowNoteModal] = useState(false);
 
     const handleCreateNote = () => {

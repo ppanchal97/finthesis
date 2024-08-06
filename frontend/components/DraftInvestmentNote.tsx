@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const DraftInvestmentNote = ({ onClose }) => {
+interface DraftInvestmentNoteProps {
+    onClose: () => void;
+}
+
+const DraftInvestmentNote: React.FC<DraftInvestmentNoteProps> = ({ onClose }) => {
     const initialNoteText = `- Boeing's quarterly earnings report for the period ending July 31, 2024, has highlighted significant challenges for the aerospace giant. \n- The company reported a wider-than-expected loss, surpassing analyst forecasts and underscoring ongoing financial struggles.\n- Revenue also fell short of expectations, with both the commercial airplane and defense divisions contributing to the underperformance.\n- The report reveals that Boeing continues to grapple with safety and manufacturing issues, which are affecting the timely delivery of new aircraft.\n- These issues are a continuation of problems that have plagued the company for several years. Compounding these difficulties`;
 
     const [noteText, setNoteText] = useState(initialNoteText);
