@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import CreatableSelect from 'react-select/creatable';
+import { GroupBase, OptionsOrGroups, } from "react-select";
 import Image from 'next/image';
 
 interface CreateWatchListProps {
     onClose: (watchlistName?: string) => void;  // Update to accept an optional string
 }
 
+interface OptionType {
+    label: string;
+    value: string;
+}
 
 const CreateWatchList: React.FC<CreateWatchListProps> = ({ onClose }) => {
     const [selectedTickers, setSelectedTickers] = useState([]);
@@ -14,31 +19,31 @@ const CreateWatchList: React.FC<CreateWatchListProps> = ({ onClose }) => {
     const [selectedTwitterAccounts, setSelectedTwitterAccounts] = useState([]);
     const [investmentThesis, setInvestmentThesis] = useState('');
 
-    const tickerOptions = [
+    const tickerOptions: OptionsOrGroups<OptionType, GroupBase<OptionType>> = [
         { value: 'Ticker 1', label: 'Ticker 1' },
     ];
 
-    const websiteOptions = [
+    const websiteOptions: OptionsOrGroups<OptionType, GroupBase<OptionType>> = [
         { value: 'website1.com', label: 'website1.com' },
         { value: 'website2.com', label: 'website2.com' },
         // More predefined website options can be listed here
     ];
 
-    const twitterOptions = [
+    const twitterOptions: OptionsOrGroups<OptionType, GroupBase<OptionType>> = [
         { value: 'twitter1', label: '@twitter1' },
         { value: 'twitter2', label: '@twitter2' },
         // More predefined Twitter options can be listed here
     ];
 
-    const handleTickersChange = (selectedOptions) => {
+    const handleTickersChange = (selectedOptions: any) => {
         setSelectedTickers(selectedOptions || []);
     };
 
-    const handleWebsiteChange = (selectedOptions) => {
+    const handleWebsiteChange = (selectedOptions: any) => {
         setSelectedWebsites(selectedOptions || []);
     };
 
-    const handleTwitterAccountChange = (selectedOptions) => {
+    const handleTwitterAccountChange = (selectedOptions: any) => {
         setSelectedTwitterAccounts(selectedOptions || []);
     };
 
@@ -54,7 +59,7 @@ const CreateWatchList: React.FC<CreateWatchListProps> = ({ onClose }) => {
     return (
         <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center p-4 z-50">
             <div className="relative bg-white p-4 rounded-lg" style={{ width: '800px' }}>
-                <button onClick={onClose} className="absolute top-2 right-2">
+                <button onClick={() => onClose()} className="absolute top-2 right-2">
                     <Image src="/close.svg" alt="Close" width={20} height={20} />
                 </button>
                 <h2 className="font-bold text-xl">Create New Watchlist</h2>
