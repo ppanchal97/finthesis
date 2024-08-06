@@ -1,0 +1,10 @@
+onnxruntime>=1.17.3
+langchain>=0.1.20
+langchain-community>=0.0.38
+llama-parse>=0.4.3
+fastembed>=0.2.7
+qdrant-client>=1.9.1
+python-dotenv>=1.0.1
+unstructured[md]>=0.13.7
+pypdf>=4.1.0
+requests>=2.31.0

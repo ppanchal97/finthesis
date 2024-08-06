@@ -1,0 +1,71 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+*deployLog-dev.txt
+*deployLog-prod.txt
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependencies
+node_modules
+jspm_packages
+
+# vim
+.*.sw*
+Session.vim
+
+# Serverless
+.webpack
+.serverless
+
+# env
+env.yml
+.env
+venv
+
+# Cache
+__pycache__
+
+# Environment Variables
+*.env*
+!.env.sample
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Misc
+.DS_Store
+
+# Testing
+src/api/test-api
+python_layer/
+
+# Lambda Layers
+ingestor/data/*
+!src/api/interview-api/layers/interview-api-lambda-layer/.gitkeep
+
+# VS Code
+.vscode/
+
+# Data
+data_backup/
+
+step_*.md
+
+# JSON files
+chat_history.json
+parameterized_query.json
+
+# EB
+!.platform/
