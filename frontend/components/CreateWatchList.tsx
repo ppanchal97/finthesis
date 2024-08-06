@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import CreatableSelect from 'react-select/creatable';
 import Image from 'next/image';
 
-const CreateWatchlist = ({ onClose }) => {
+interface CreateWatchListProps {
+    onClose: (watchlistName?: string) => void;  // Update to accept an optional string
+}
+
+
+const CreateWatchList: React.FC<CreateWatchListProps> = ({ onClose }) => {
     const [selectedTickers, setSelectedTickers] = useState([]);
     const [watchlistName, setWatchlistName] = useState('');
     const [selectedWebsites, setSelectedWebsites] = useState([]);
@@ -38,11 +43,11 @@ const CreateWatchlist = ({ onClose }) => {
     };
 
     const handleSave = () => {
-        console.log("Saving Watchlist:", watchlistName);  // Debug output
+        console.log("Saving Watchlist:", watchlistName);
         if (watchlistName.trim()) {
-            onClose(watchlistName);  // Pass the watchlist name back to Navbar
+            onClose(watchlistName);  // Pass the watchlist name back to Navbar if not empty
         } else {
-            onClose();  // Call onClose without parameters if no name was provided
+            onClose();  // Close without parameters if no name was provided
         }
     };
 
@@ -135,4 +140,4 @@ const CreateWatchlist = ({ onClose }) => {
     );
 };
 
-export default CreateWatchlist;
+export default CreateWatchList;
