@@ -27,12 +27,15 @@ const NewsCardStack: React.FC<NewsCardStackProps> = ({ onNewsSelect, selectedNew
 
             const addItem = () => {
                 if (index < items.length && active) {
-                    setNewsItemsByWatchlist(prevItems => ({
-                        ...prevItems,
-                        [watchlist]: [...(prevItems[watchlist] || []), items[index]]
-                    }));
-                    index++;
-                    setTimeout(addItem, randomInterval());
+                    const currentItem = items[index];
+                    if (currentItem) {  // Ensure currentItem is defined
+                        setNewsItemsByWatchlist(prevItems => ({
+                            ...prevItems,
+                            [watchlist]: [...(prevItems[watchlist] || []), currentItem]
+                        }));
+                        index++;
+                    }
+                    setTimeout(addItem, randomInterval());  // Schedule the next item or attempt, even if currentItem was undefined
                 }
             };
 
