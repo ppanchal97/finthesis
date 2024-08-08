@@ -22,7 +22,8 @@ const NewsDetail: React.FC<NewsDetailProps> = ({ newsItem }) => {
 
     return (
         <div className="p-4 text-white">
-            <NewsDetailHeader 
+            <NewsDetailHeader
+                tickersImpacted={newsItem.tickers_impacted}
                 holdingImpact={newsItem.thesis_impact} 
                 portfolioImpact={newsItem.fundamentals_impact} 
                 onCreateNote={handleCreateNote}  // Pass the function here
