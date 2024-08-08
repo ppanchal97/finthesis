@@ -24,13 +24,13 @@ const NewsDetail: React.FC<NewsDetailProps> = ({ newsItem }) => {
         <div className="p-4 text-white">
             <NewsDetailHeader
                 tickersImpacted={newsItem.tickers_impacted}
-                holdingImpact={newsItem.thesis_impact} 
-                portfolioImpact={newsItem.fundamentals_impact} 
+                holdingImpact={newsItem.thesis_impact}
+                portfolioImpact={newsItem.fundamentals_impact}
                 onCreateNote={handleCreateNote}  // Pass the function here
             />
             {showNoteModal && <DraftInvestmentNote onClose={handleCloseNote} />}
-            <NewsText title={newsItem.title} description={newsItem.description} fullText={newsItem.full_text} />
-            <QAComponent title={newsItem.title} description={newsItem.description} fullText={newsItem.full_text} />
+            <NewsText title={newsItem.title} description={newsItem.description} fundamentals_impact_text={newsItem.fundamentals_impact_text} thesis_impact_text={newsItem.thesis_impact_text} />
+            <QAComponent title={newsItem.title} description={newsItem.description} />
         </div>
     );
 };

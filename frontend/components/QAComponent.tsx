@@ -11,10 +11,9 @@ interface Message {
 interface NewsTextProps {
     title: string;
     description: string;
-    fullText: string;
 }
 
-const QAComponent: React.FC<NewsTextProps> = ({ title, description, fullText }) => {
+const QAComponent: React.FC<NewsTextProps> = ({ }) => {
     const DeepChat = dynamic(
         () => import("deep-chat-react").then((mod) => mod.DeepChat),
         {
