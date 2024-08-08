@@ -3,6 +3,7 @@ import NewsText from './NewsText';
 import QAComponent from './QAComponent';
 import NewsDetailHeader from './NewsDetailHeader';
 import DraftInvestmentNote from './DraftInvestmentNote';
+import TickerDetailView from './TickerDetailView';
 import { NewsItem } from '@/types/types';
 
 interface NewsDetailProps {
@@ -11,14 +12,16 @@ interface NewsDetailProps {
 
 const NewsDetail: React.FC<NewsDetailProps> = ({ newsItem }) => {
     const [showNoteModal, setShowNoteModal] = useState(false);
+    const [showTickerModal, setShowTickerModal] = useState(false);
+    const [selectedTicker, setSelectedTicker] = useState('');
 
-    const handleCreateNote = () => {
-        setShowNoteModal(true);
+    const handleCreateNote = () => setShowNoteModal(true);
+    const handleCloseNote = () => setShowNoteModal(false);
+    const handleTickerClick = (ticker: string) => {
+        setSelectedTicker(ticker);
+        setShowTickerModal(true);
     };
-
-    const handleCloseNote = () => {
-        setShowNoteModal(false);
-    };
+    const handleCloseTickerDetail = () => setShowTickerModal(false);
 
     return (
         <div className="p-4 text-white">
@@ -26,11 +29,13 @@ const NewsDetail: React.FC<NewsDetailProps> = ({ newsItem }) => {
                 tickersImpacted={newsItem.tickers_impacted}
                 holdingImpact={newsItem.thesis_impact}
                 portfolioImpact={newsItem.fundamentals_impact}
-                onCreateNote={handleCreateNote}  // Pass the function here
+                onCreateNote={handleCreateNote}
+                onTickerClick={handleTickerClick}
             />
             {showNoteModal && <DraftInvestmentNote onClose={handleCloseNote} />}
-            <NewsText title={newsItem.title} description={newsItem.description} fundamentals_impact_text={newsItem.fundamentals_impact_text} thesis_impact_text={newsItem.thesis_impact_text} />
-            <QAComponent title={newsItem.title} description={newsItem.description} />
+            {showTickerModal && <TickerDetailView ticker={selectedTicker} onClose={handleCloseTickerDetail} />}
+            <NewsText title={newsItem.title} description={newsItem.description} fundamentals_impact_text={newsItem.fundamentals_impact} thesis_impact_text={newsItem.thesis_impact_text} />
+            <QAComponent/>
         </div>
     );
 };

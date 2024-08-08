@@ -9,8 +9,6 @@ interface Message {
 }
 
 interface NewsTextProps {
-    title: string;
-    description: string;
 }
 
 const QAComponent: React.FC<NewsTextProps> = ({ }) => {

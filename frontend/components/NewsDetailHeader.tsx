@@ -1,3 +1,4 @@
+// components/NewsDetailHeader.tsx
 import React from 'react';
 
 interface NewsDetailHeaderProps {
@@ -5,31 +6,30 @@ interface NewsDetailHeaderProps {
     holdingImpact: string;
     portfolioImpact: string;
     onCreateNote: () => void;
+    onTickerClick: (ticker: string) => void;  // New prop for handling ticker clicks
 }
 
 const NewsDetailHeader: React.FC<NewsDetailHeaderProps> = ({
     tickersImpacted,
     holdingImpact,
     portfolioImpact,
-    onCreateNote
+    onCreateNote,
+    onTickerClick
 }) => {
     return (
         <div className="grid grid-cols-3 items-center text-lightblue" style={{ fontFamily: 'Roboto' }}>
-            {/* Horizontally aligned tickers */}
             <div className="col-span-1 flex items-center justify-start space-x-2">
                 <p className="font-bold text-sm">Impacted Tickers:</p>
                 <div className="flex flex-wrap items-center">
                     {tickersImpacted.map((ticker, index) => (
-                        <span key={index} className="text-sm mr-2">{ticker}</span>  // Use span for inline display
+                        <span key={index} className="text-sm mr-2 cursor-pointer" onClick={() => onTickerClick(ticker)}>{ticker}</span>
                     ))}
                 </div>
             </div>
-
-            {/* Button to create a note */}
             <div className="col-span-2 flex justify-end">
                 <button onClick={onCreateNote} style={{
-                    width: '20%',
-                    height: '20%',
+                    width: '138px',
+                    height: '33px',
                     backgroundColor: '#2156E7',
                     color: '#FFFFFF',
                     border: 'none',
