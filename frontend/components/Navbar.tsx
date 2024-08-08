@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import CreateWatchlist from './CreateWatchList';
+import CatchUpModal from './CatchUpModal';  // Ensure this import
 
 interface NavbarProps {
     onWatchlistChange: (watchlist: any) => void;
@@ -9,10 +10,15 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ onWatchlistChange }) => {
     const [showCreateWatchlist, setShowCreateWatchlist] = useState(false);
+    const [showCatchUpModal, setShowCatchUpModal] = useState(false);
     const [watchlists, setWatchlists] = useState(['Priority', 'Highlights', 'All', 'Consumer', 'iPhone']);
 
     const handleCreateWatchlist = () => {
         setShowCreateWatchlist(true);
+    };
+
+    const handleCatchUp = () => {
+        setShowCatchUpModal(true);
     };
 
     const handleClose = (newWatchlistName = '') => {
@@ -20,6 +26,10 @@ const Navbar: React.FC<NavbarProps> = ({ onWatchlistChange }) => {
             setWatchlists(currentWatchlists => [...currentWatchlists, newWatchlistName]);
         }
         setShowCreateWatchlist(false);
+    };
+
+    const handleCloseCatchUp = () => {
+        setShowCatchUpModal(false);
     };
 
     return (
@@ -30,11 +40,15 @@ const Navbar: React.FC<NavbarProps> = ({ onWatchlistChange }) => {
                         <span className="text-lightblue font-bold">{watchlist}</span>
                     </button>
                 ))}
-                <button onClick={handleCreateWatchlist} className="inline-block">
+                <button onClick={handleCreateWatchlist} className="inline-block mx-2">
                     <Image src="/plus.svg" alt="Add" width={20} height={20} />
+                </button>
+                <button onClick={handleCatchUp} className="inline-block mx-2 text-navbar-text bg-blue-500 p-2 rounded-lg">
+                    Catch me up
                 </button>
             </div>
             {showCreateWatchlist && <CreateWatchlist onClose={handleClose} />}
+            {showCatchUpModal && <CatchUpModal onClose={handleCloseCatchUp} />}
         </>
     );
 };
