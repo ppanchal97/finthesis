@@ -12,7 +12,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "moderate",
             tickers_impacted: ["VLGEA", "VWE"],
             source: "Bloomberg",
-
+            thesis_impact_text: ""
         },
         {
             id: 26524,
@@ -24,7 +24,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "positive",
             tickers_impacted: ["UBER, LYFT, CART"],
             source: "Reuters",
-
+            thesis_impact_text: ""
         },
         {
             id: 132353,
@@ -36,7 +36,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "critical",
             tickers_impacted: ["BA"],
             source: "AP",
-
+            thesis_impact_text: ""
         },
         {
             id: 6245,
@@ -48,7 +48,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'moderate',
             tickers_impacted: ["BA"],
             source: 'Bloomberg',
-
+            thesis_impact_text: ""
         },
         {
             id: 435246,
@@ -60,7 +60,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'critical',
             tickers_impacted: ["CVX", "XOM", "BP", "COP"],
             source: 'AP',
-
+            thesis_impact_text: ""
         },
         {
             id: 75324,
@@ -72,7 +72,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'moderate',
             tickers_impacted: ["NEE", "GE", "SIEGY", "BEP"],
             source: 'CNN',
- 
+            thesis_impact_text: ""
         }
     ],
     "iPhone": [
@@ -86,7 +86,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "moderate",
             tickers_impacted: ["003550", "BC94"],
             source: "Bloomberg",
-
+            thesis_impact_text: ""
         },
     ],
     "Consumer": [
@@ -100,7 +100,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "positive",
             tickers_impacted: ["UBER, LYFT, CART"],
             source: "Reuters",
-
+            thesis_impact_text: ""
         },
     ],
     "All": [
@@ -114,7 +114,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'critical',
             tickers_impacted: ["CVX", "XOM", "BP", "COP"],
             source: 'AP',
-
+            thesis_impact_text: ""
         },
     ],
     "Highlights": [
@@ -128,7 +128,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'moderate',
             tickers_impacted: ["BA"],
             source: 'Bloomberg',
-
+            thesis_impact_text: ""
         },
     ],
     "Priority": [
@@ -142,7 +142,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "moderate",
             tickers_impacted: ["VLGEA", "VWE"],
             source: "Bloomberg",
-
+            thesis_impact_text: ""
         },
         {
             id: 3422,
@@ -154,7 +154,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "positive",
             tickers_impacted: ["UBER, LYFT, CART"],
             source: "Reuters",
-
+            thesis_impact_text: ""
         },
         {
             id: 3241,
@@ -166,7 +166,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "critical",
             tickers_impacted: ["BA"],
             source: "AP",
-
+            thesis_impact_text: ""
         },
         {
             id: 1455,
@@ -178,7 +178,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'moderate',
             tickers_impacted: ["BA"],
             source: 'Bloomberg',
-
+            thesis_impact_text: ""
         },
         {
             id: 63524,
@@ -190,7 +190,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'critical',
             tickers_impacted: ["CVX", "XOM", "BP", "COP"],
             source: 'AP',
-
+            thesis_impact_text: ""
         },
         {
             id: 735245,
@@ -202,7 +202,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'moderate',
             tickers_impacted: ["NEE", "GE", "SIEGY", "BEP"],
             source: 'CNN',
- 
+            thesis_impact_text: ""
         },
         {
             id: 2538,
@@ -214,7 +214,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'moderate',
             tickers_impacted: ["MSFT", "NVDA", "GOOG", "TSLA"],
             source: 'FTC',
-
+            thesis_impact_text: ""
         },
         {
             id: 92413,
@@ -226,7 +226,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'positive',
             tickers_impacted: ["LMT", "BA", "RTX", "NOC"],
             source: 'AP',
-
+            thesis_impact_text: ""
         },
         {
             id: 124130,
@@ -238,7 +238,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'moderate',
             tickers_impacted: ["ASML"],
             source: 'Bloomberg',
-
+            thesis_impact_text: ""
         },
         {
             id: 1324131,
@@ -250,7 +250,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "moderate",
             tickers_impacted: ["VLGEA", "VWE"],
             source: "Bloomberg",
-
+            thesis_impact_text: ""
         },
         {
             id: 1235244635,
@@ -262,7 +262,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "positive",
             tickers_impacted: ["UBER, LYFT, CART"],
             source: "Reuters",
-
+            thesis_impact_text: ""
         },
         {
             id: 124533,
@@ -274,7 +274,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "critical",
             tickers_impacted: ["BA"],
             source: "AP",
-
+            thesis_impact_text: ""
         },
         {
             id: 12534,
@@ -286,7 +286,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "moderate",
             tickers_impacted: ["003550", "BC94"],
             source: "Bloomberg",
-
+            thesis_impact_text: ""
         },
         {
             id: 1253645,
@@ -298,7 +298,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'moderate',
             tickers_impacted: ["BA"],
             source: 'Bloomberg',
-
+            thesis_impact_text: ""
         },
         {
             id: 16675645,
@@ -310,7 +310,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'critical',
             tickers_impacted: ["CVX", "XOM", "BP", "COP"],
             source: 'AP',
-
+            thesis_impact_text: ""
         },
         {
             id: 17564537,
@@ -322,7 +322,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'moderate',
             tickers_impacted: ["NEE", "GE", "SIEGY", "BEP"],
             source: 'CNN',
- 
+            thesis_impact_text: ""
         },
         {
             id: 16756458,
@@ -334,7 +334,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'moderate',
             tickers_impacted: ["MSFT", "NVDA", "GOOG", "TSLA"],
             source: 'FTC',
-
+            thesis_impact_text: ""
         },
         {
             id: 157643549,
@@ -346,7 +346,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'positive',
             tickers_impacted: ["LMT", "BA", "RTX", "NOC"],
             source: 'AP',
-
+            thesis_impact_text: ""
         },
         {
             id: 2574540,
@@ -358,7 +358,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'moderate',
             tickers_impacted: ["ASML"],
             source: 'Bloomberg',
-
+            thesis_impact_text: ""
         },
         {
             id: 27564321,
@@ -370,7 +370,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'moderate',
             tickers_impacted: ["BA"],
             source: 'Bloomberg',
-
+            thesis_impact_text: ""
         },
         {
             id: 25463522,
@@ -382,7 +382,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'critical',
             tickers_impacted: ["CVX", "XOM", "BP", "COP"],
             source: 'AP',
-
+            thesis_impact_text: ""
         },
         {
             id: 257463,
@@ -394,7 +394,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'moderate',
             tickers_impacted: ["NEE", "GE", "SIEGY", "BEP"],
             source: 'CNN',
- 
+            thesis_impact_text: ""
         },
         {
             id: 246354,
@@ -406,7 +406,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'moderate',
             tickers_impacted: ["MSFT", "NVDA", "GOOG", "TSLA"],
             source: 'FTC',
-
+            thesis_impact_text: ""
         },
         {
             id: 2746355,
@@ -418,7 +418,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'positive',
             tickers_impacted: ["LMT", "BA", "RTX", "NOC"],
             source: 'AP',
-
+            thesis_impact_text: ""
         },
         {
             id: 25746536,
@@ -430,7 +430,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: 'moderate',
             tickers_impacted: ["ASML"],
             source: 'Bloomberg',
-
+            thesis_impact_text: ""
         },
         {
             id: 246357,
@@ -442,7 +442,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "moderate",
             tickers_impacted: ["VLGEA", "VWE"],
             source: "Bloomberg",
-
+            thesis_impact_text: ""
         },
         {
             id: 284635,
@@ -454,7 +454,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "positive",
             tickers_impacted: ["UBER, LYFT, CART"],
             source: "Reuters",
-
+            thesis_impact_text: ""
         },
         {
             id: 2463549,
@@ -466,7 +466,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "critical",
             tickers_impacted: ["BA"],
             source: "AP",
-
+            thesis_impact_text: ""
         },
         {
             id: 346350,
@@ -478,7 +478,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "moderate",
             tickers_impacted: ["VLGEA", "VWE"],
             source: "Bloomberg",
-
+            thesis_impact_text: ""
         },
     ]
 }
