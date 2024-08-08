@@ -3,9 +3,10 @@ export interface NewsItem {
     timestamp: string;
     title: string;
     description: string;
-    full_text: string;
-    holding_impact: string;
-    portfolio_impact: string;
-    holdings_impacted: string[];
+    fundamentals_impact_text: string;
+    thesis_impact_text: string;
+    fundamentals_impact: string;
+    thesis_impact: string;
+    tickers_impacted: string[];
     source: string;
 }

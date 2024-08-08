@@ -110,6 +110,12 @@ const CreateWatchList: React.FC<CreateWatchListProps> = ({ onClose }) => {
                     />
                 </section>
                 <section className="mb-4">
+                    <h3 className="font-bold text-xl">Newsletters & Email Forwarding</h3>
+                    <text>Set up forwarding of your subscription newsletters and research to your private email and see them in Finthesis.</text>
+                    <br/>
+                    <b>genius.beaver@tryfinthesis.com</b>
+                </section>
+                <section className="mb-4">
                     <h3 className="font-bold text-xl">Investment Thesis</h3>
                     <textarea
                         value={investmentThesis}
@@ -117,24 +123,6 @@ const CreateWatchList: React.FC<CreateWatchListProps> = ({ onClose }) => {
                         className="border p-2 w-full h-40"  // Set height to 40 to make it a large text box
                         placeholder="Enter your investment thesis here..."
                     />
-                </section>
-                <section className="mb-4">
-                    <h3 className="font-bold text-xl">Fundamental Data Point Sources</h3>
-                    <div className="flex flex-col">
-                        <label><input type="checkbox" name="sec" /> SEC Filings</label>
-                        <label><input type="checkbox" name="bills_of_lading" /> Bills of Lading</label>
-                        <label><input type="checkbox" name="cash_flow_statements" /> Cash Flow Statements</label>
-                        <label><input type="checkbox" name="income_statements" /> Income Statements</label>
-                        <label><input type="checkbox" name="balance_sheets" /> Balance Sheets</label>
-                        <label><input type="checkbox" name="quarterly_reports" /> Quarterly Reports</label>
-                        <label><input type="checkbox" name="earnings_reports" /> Earnings Reports</label>
-                        <label><input type="checkbox" name="earnings_transcripts" /> Earnings Transcripts</label>
-                        <label><input type="checkbox" name="credit_reports" /> Credit Reports</label>
-                        <label><input type="checkbox" name="audit_reports" /> Audit Reports</label>
-                        <label><input type="checkbox" name="sustainability_reports" /> Sustainability Reports</label>
-                        <label><input type="checkbox" name="risk_assessments" /> Risk Assessments</label>
-                        <label><input type="checkbox" name="industry_analyses" /> Industry Analyses</label>
-                    </div>
                 </section>
 
                 <button onClick={handleSave} className="mt-2 p-2 bg-blue-500 text-white rounded">

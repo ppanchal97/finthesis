@@ -40,9 +40,9 @@ const ImpactDetails: React.FC<ImpactDetailsProps> = ({ newsItem }) => {
                 <div>Source</div>
             </div>
             <div className="grid grid-cols-4 gap-2 mt-1 text-sm text-center">
-                <ImpactBox impact={newsItem.holding_impact} />
-                <ImpactBox impact={newsItem.portfolio_impact} />
-                <div>{newsItem.holdings_impacted.join(", ")}</div>
+                <ImpactBox impact={newsItem.thesis_impact} />
+                <ImpactBox impact={newsItem.fundamentals_impact} />
+                <div>{newsItem.tickers_impacted.join(", ")}</div>
                 <div>{newsItem.source}</div>
             </div>
         </div>

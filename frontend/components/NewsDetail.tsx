@@ -23,8 +23,8 @@ const NewsDetail: React.FC<NewsDetailProps> = ({ newsItem }) => {
     return (
         <div className="p-4 text-white">
             <NewsDetailHeader 
-                holdingImpact={newsItem.holding_impact} 
-                portfolioImpact={newsItem.portfolio_impact} 
+                holdingImpact={newsItem.thesis_impact} 
+                portfolioImpact={newsItem.fundamentals_impact} 
                 onCreateNote={handleCreateNote}  // Pass the function here
             />
             {showNoteModal && <DraftInvestmentNote onClose={handleCloseNote} />}

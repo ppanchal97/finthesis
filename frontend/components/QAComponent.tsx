@@ -26,7 +26,7 @@ const QAComponent: React.FC<NewsTextProps> = ({ title, description, fullText }) 
         <div className="flex items-center mt-auto">
             <DeepChat
                 directConnection={{
-                    openAI: { key: "api-key" }
+                    openAI: { key: `${process.env.NEXT_PUBLIC_OPENAI_KEY}` }
                 }}
                 style={{
                     backgroundColor: '#191B1E',

@@ -4,7 +4,7 @@ import { watchlistNews } from './mockData';
 import { NewsItem } from '@/types/types';
 
 interface NewsCardStackProps {
-    onNewsSelect: (item: NewsItem) => void;
+    onNewsSelect: (newsItem: NewsItem) => void;
     selectedNewsItem: NewsItem | null;
     watchlist: string;
 }
@@ -35,7 +35,7 @@ const NewsCardStack: React.FC<NewsCardStackProps> = ({ onNewsSelect, selectedNew
                         }));
                         index++;
                     }
-                    setTimeout(addItem, randomInterval());  // Schedule the next item or attempt, even if currentItem was undefined
+                    setTimeout(addItem, randomInterval());  // Schedule the next newsItem or attempt, even if currentItem was undefined
                 }
             };
 
@@ -55,13 +55,13 @@ const NewsCardStack: React.FC<NewsCardStackProps> = ({ onNewsSelect, selectedNew
 
     return (
         <div className="overflow-auto h-screen p-4">
-            {displayedNewsItems.map((item: NewsItem, index: number) => (
+            {displayedNewsItems.map((newsItem: NewsItem, index: number) => (
                 <NewsCard
-                    key={item.id}
-                    newsItem={item}
-                    onSelect={() => onNewsSelect(item)}
-                    isActive={!!selectedNewsItem && item.id === selectedNewsItem?.id}  // Ensure this evaluates to boolean
-                    shouldFlash={index === 0 && (item.portfolio_impact === 'critical' || item.holding_impact === 'critical')}
+                    key={newsItem.id}
+                    newsItem={newsItem}
+                    onSelect={() => onNewsSelect(newsItem)}
+                    isActive={!!selectedNewsItem && newsItem.id === selectedNewsItem?.id}  // Ensure this evaluates to boolean
+                    shouldFlash={index === 0 && (newsItem.fundamentals_impact === 'critical' || newsItem.thesis_impact === 'critical')}
                 />)
             )}
         </div>
