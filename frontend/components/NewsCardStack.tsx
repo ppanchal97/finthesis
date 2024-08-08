@@ -9,19 +9,21 @@ interface NewsCardStackProps {
     watchlist: string;
 }
 
+// Define a more specific type for storing news items by watchlist
 interface NewsItemsByWatchlist {
     [key: string]: NewsItem[];
 }
 
 const NewsCardStack: React.FC<NewsCardStackProps> = ({ onNewsSelect, selectedNewsItem, watchlist }) => {
+    // Use the defined interface for better type checking
     const [newsItemsByWatchlist, setNewsItemsByWatchlist] = useState<NewsItemsByWatchlist>({});
 
     useEffect(() => {
         let active = true;
 
         const fetchNewsItems = async () => {
-            const items: NewsItem[] = watchlistNews[watchlist] || [];
-            let index = newsItemsByWatchlist[watchlist]?.length || 0;  // Start from the last fetched index
+            const items = watchlistNews[watchlist] || [];
+            let index = newsItemsByWatchlist[watchlist]?.length || 0;
 
             const addItem = () => {
                 if (index < items.length && active) {
@@ -30,19 +32,19 @@ const NewsCardStack: React.FC<NewsCardStackProps> = ({ onNewsSelect, selectedNew
                         [watchlist]: [...(prevItems[watchlist] || []), items[index]]
                     }));
                     index++;
-                    setTimeout(addItem, randomInterval());  // Schedule the next item
+                    setTimeout(addItem, randomInterval());
                 }
             };
 
-            addItem();  // Start adding items
+            addItem();
         };
 
         fetchNewsItems();
 
         return () => {
-            active = false;  // Clean up to avoid setting state after unmount
+            active = false;
         };
-    }, [watchlist, newsItemsByWatchlist]);  // Effect runs when watchlist changes
+    }, [watchlist]);  // Note: Including newsItemsByWatchlist in dependency array can cause excessive re-renders
 
     const randomInterval = () => Math.floor(Math.random() * (8000 - 2000 + 1) + 2000);
 
@@ -50,17 +52,15 @@ const NewsCardStack: React.FC<NewsCardStackProps> = ({ onNewsSelect, selectedNew
 
     return (
         <div className="overflow-auto h-screen p-4">
-            {displayedNewsItems.map((item, index) => (
-                item && (
-                    <NewsCard
-                        key={item.id}
-                        newsItem={item}
-                        onSelect={() => onNewsSelect(item)}
-                        isActive={selectedNewsItem ? item.id === selectedNewsItem.id : false}
-                        shouldFlash={index === 0 && (item.portfolio_impact === 'critical' || item.holding_impact === 'critical')}
-                    />
-                )
-            ))}
+            {displayedNewsItems.map((item: NewsItem, index: number) => (
+                <NewsCard
+                    key={item.id}
+                    newsItem={item}
+                    onSelect={() => onNewsSelect(item)}
+                    isActive={!!selectedNewsItem && item.id === selectedNewsItem?.id}  // Ensure this evaluates to boolean
+                    shouldFlash={index === 0 && (item.portfolio_impact === 'critical' || item.holding_impact === 'critical')}
+                />)
+            )}
         </div>
     );
 };
