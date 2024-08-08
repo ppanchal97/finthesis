@@ -34,7 +34,7 @@ const NewsDetail: React.FC<NewsDetailProps> = ({ newsItem }) => {
             />
             {showNoteModal && <DraftInvestmentNote onClose={handleCloseNote} />}
             {showTickerModal && <TickerDetailView ticker={selectedTicker} onClose={handleCloseTickerDetail} />}
-            <NewsText title={newsItem.title} description={newsItem.description} fundamentals_impact_text={newsItem.fundamentals_impact} thesis_impact_text={newsItem.thesis_impact_text} />
+            <NewsText title={newsItem.title} description={newsItem.description} fundamentals_impact_text={newsItem.fundamentals_impact_text} thesis_impact_text={newsItem.thesis_impact_text} />
             <QAComponent/>
         </div>
     );

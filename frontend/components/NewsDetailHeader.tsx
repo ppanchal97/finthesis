@@ -28,8 +28,8 @@ const NewsDetailHeader: React.FC<NewsDetailHeaderProps> = ({
             </div>
             <div className="col-span-2 flex justify-end">
                 <button onClick={onCreateNote} style={{
-                    width: '138px',
-                    height: '33px',
+                    width: '20%',
+                    height: '100%',
                     backgroundColor: '#2156E7',
                     color: '#FFFFFF',
                     border: 'none',

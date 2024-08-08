@@ -12,7 +12,7 @@ export const watchlistNews: { [key: string]: NewsItem[] } = {
             fundamentals_impact: "moderate",
             tickers_impacted: ["VLGEA", "VWE"],
             source: "Bloomberg",
-            thesis_impact_text: ""
+            thesis_impact_text: "ss"
         },
         {
             id: 26524,
